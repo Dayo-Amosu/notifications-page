@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.container {
+  max-width: 400px;
+  padding: 1rem;
+  
+  border-radius: 7px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.notifications-left {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.number-left {
+  display: inline-block;
+  background-color: var(--Blue);
+  color: var(--White);
+  padding: 2px 12px;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+.mark-read {
+  font-size: 0.8rem;
+  opacity: 70%;
+  transition: all .3s ease-in-out;
+}
+.mark-read:hover{
+  color: var(--Blue);
+  cursor: pointer;
+}
+.page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 7px;
+}
+.unread {
+  background-color: var(--Very-light-grayish-blue);
+}
+.unread .user-details::after{
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--Red);
+  display: inline-block;
+  border-radius: 50%;
+  margin-left: 3px;
+}
+.user-avatar {
+  width: 50px;
+}
+.user-details {
+  font-size: 0.9rem;
+  color: var(--Dark-grayish-blue);
+}
+.username {
+  font-weight: bolder;
+  color: black;
+  margin-right: 4px;
+  transition: all .3s ease-in-out;
+}
+.username:hover{
+  color: var(--Blue);
+  cursor:pointer;
+}
+.emphasized-text {
+  color: var(--Dark-grayish-blue);
+  font-weight: bold;
+  transition: all .3s ease-in-out;
+}
+.emphasized-text:hover{
+  color: var(--Blue);
+  cursor:pointer;
+}
+.user-timestamp {
+  color: var(--Grayish-blue);
+  padding-top: 3px;
+}
+.group-name {
+  font-weight: bolder;
+  color: var(--Blue);
+  transition: all .3s ease-in-out;
+}
+.group-name:hover{
+  color: var(--Blue);
+  cursor: pointer;
+}
+.hasanuddin .private-message {
+  border: 1px solid var(--Dark-grayish-blue);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  color: var(--Dark-grayish-blue);
+  transition: all .3s ease-in-out;
+  width: 110%;
+}
+.hasanuddin .private-message:hover{
+  background-color: var(--Light-grayish-blue-1);
+  cursor: pointer;
+}
+.smith .user-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.smith .user-info .picture-post {
+  width: 40px; 
+  margin-left: 1.2rem;
+  transition: all .3s ease-in-out;
+}
+.smith .picture-post:hover{
+  padding: 2px;
+  border: 1px solid hsl(211, 68%, 94%);
+  border-radius: 10px;
+  cursor:pointer;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px){
+  body{
+    padding: 2rem;
+    background-color: var(--Very-light-grayish-blue);
+  }
+  .container{
+    max-width: 700px;
+    background-color: var(--White);
+  }
+  .hasanuddin .private-message{
+    width:100%;
+  }
+  .smith .user-info{
+    display: flex;
+    justify-content: space-between;
+    gap: 13rem;
+}
+}
